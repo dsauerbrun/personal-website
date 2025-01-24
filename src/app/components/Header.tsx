@@ -20,11 +20,6 @@ export default function Header() {
               Resume
             </Link>
           </li>
-          <li>
-            <Link href="/#connect" className="nav-link hover:text-primary">
-              Connect
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>

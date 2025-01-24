@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Document, Page, pdfjs } from "react-pdf"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import Loading from "../components/Loading"
 import 'react-pdf/dist/Page/AnnotationLayer.css';

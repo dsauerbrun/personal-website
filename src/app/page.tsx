@@ -72,6 +72,11 @@ export default function Home() {
               LinkedIn
             </Link>
           </Button>
+          <Button variant="outline" asChild className="button">
+            <Link href="mailto:dsauerbrun@gmail.com" target="_blank">
+              dsauerbrun@gmail.com
+            </Link>
+          </Button>
         </div>
       </section>
     </div>
