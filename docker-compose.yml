@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  personal-website:
-    container_name: next-app
+  server:
+    container_name: personal-website
     build:
       context: .
       dockerfile: ./Dockerfile
