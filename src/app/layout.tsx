@@ -1,4 +1,5 @@
 import "./globals.css"
+import "./styles/custom.css" // Add this line
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -6,8 +7,8 @@ import Footer from "./components/Footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Your Name - Personal Website",
-  description: "Personal website and portfolio of Your Name",
+  title: "Daniel Sauerbrun",
+  description: "Personal website of Daniel Sauerbrun",
 }
 
 export default function RootLayout({
