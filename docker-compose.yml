@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  personal-website:
+    container_name: next-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/app/personal-website
+    restart: always
+    ports:
+      - 3000:3000
