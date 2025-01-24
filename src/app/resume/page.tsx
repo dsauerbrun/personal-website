@@ -9,12 +9,8 @@ import Loading from "../components/Loading"
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Set the worker source for react-pdf
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-//const resumeUrl = "https://drive.google.com/file/d/1z2SNN7Cy-AmELRcSEFyuzjx3C02vJhdw/view?usp=sharing"
 const resumeUrl = "/daniel-sauerbrun-resume.pdf"
 
 export default function ResumePage() {
