@@ -46,11 +46,17 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <p>
-            I am a seasoned software engineer with over a decade of experience designing and developing scalable systems and robust applications. My expertise spans technologies like TypeScript, Go, Kafka, Kubernetes, and React, allowing me to deliver impactful solutions and modernize legacy systems. At Opendoor, I spearheaded the development of a React-based micro frontend framework, contributed to maintaining high-performance Golang microservices, and led the migration of services to AWS EKS. I also worked closely with cross-functional teams to ensure seamless integration across diverse engineering groups.
+            I am a seasoned software engineer with over a decade of experience designing and developing scalable systems and robust applications. 
+            My expertise spans technologies like TypeScript, Go, Kafka, Kubernetes, and React, allowing me to deliver impactful solutions and modernize legacy systems.
             </p>
             <br />
             <p>
-            Earlier in my career, I helped build backend systems that could handle massive traffic, like 1,000 requests per second at BigBrain Games. As a full-stack developer at FulcrumPro and ChatLingual, I got hands-on with everything from building ERP systems to launching MVPs, tackling challenges across the stack. I love digging into tough problems and finding practical, scalable solutions that make life easier for both teams and users.
+            Most recently, at Opendoor, I led the development of a React-based micro frontend framework which was adopted rapidly leading to a more effective ecosystem of tooling, 
+            contributed to high-performance Golang microservices, and led the migration of services to AWS EKS. I also spent a good chunk of my time working closely with adjacent teams' staff engineers to ensure seamless integration across engineering groups.
+            </p>
+            <br />
+            <p>
+            Earlier in my career, I helped build backend systems that could handle bursty traffic. As a full-stack developer at FulcrumPro and ChatLingual, I got hands-on with everything from building ERP systems to launching MVPs, tackling challenges across the stack. I love digging into tough problems and finding practical, scalable solutions that make life easier for both teams and users.
             </p>
             <Button className="mt-4 button" variant="outline" asChild>
               <Link href="/resume">View My Full Resume</Link>
