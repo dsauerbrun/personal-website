@@ -7,7 +7,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <section className="mb-12">
         <p className="text-xl text-primary">
-          Hi, I'm Daniel. I'm a software developer passionate about building scalable applications and learning new technologies.
+          Hi, I&apos;m Daniel. I&apos;m a software developer passionate about building scalable applications and learning new technologies.
         </p>
       </section>
 
@@ -20,9 +20,9 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <p>I first started programming when I was 13 years old. I was hanging out in IRC chat rooms and playing A LOT of Starcraft: Brood War.
-               I really wanted to make a fan site for Starcraft and some of the technical people in the chat rooms volunteered to teach me. I built the crappiest looking website you'd have ever seen, even by early 2000's standards, but I was hooked!</p>
+               I really wanted to make a fan site for Starcraft and some of the technical people in the chat rooms volunteered to teach me. I built the crappiest looking website you&apos;d have ever seen, even by early 2000&apos;s standards, but I was hooked!</p>
             <br />
-            <p>Fast forward 20 years and I've worked at a number of early stage startups which taught me how to wear many hats as well as more 
+            <p>Fast forward 20 years and I&apos;ve worked at a number of early stage startups which taught me how to wear many hats as well as more
               established/public companies which taught me how to work in larger organizations.
                I have a passion for building scalable applications and learning new technologies. 
                I also enjoy mentoring junior developers and sharing knowledge with the community.</p>
@@ -30,7 +30,7 @@ export default function Home() {
             <br /> 
             <p>Beyond my passion for software, I have spent a chunk of my life rock climbing. 
               On weekends you can typically find me climbing locally in the Flatirons or Clear Creek Canyon.
-              For my vacations you'll usually find me on some European limestone. I love to travel and typically combine my vacations with climbing trips.
+              For my vacations you&apos;ll usually find me on some European limestone. I love to travel and typically combine my vacations with climbing trips.
               On that note, I created a website, <a href="https://www.climbcation.com/" target="_blank">climbcation.com</a> to help people plan their vacations to world class climbing destinations.</p>
 
           </CardContent>
@@ -52,7 +52,7 @@ export default function Home() {
             <br />
             <p>
             Most recently, at Opendoor, I led the development of a React-based micro frontend framework which was adopted rapidly leading to a more effective ecosystem of tooling, 
-            contributed to high-performance Golang microservices, and led the migration of services to AWS EKS. I also spent a good chunk of my time working closely with adjacent teams' staff engineers to ensure seamless integration across engineering groups.
+            contributed to high-performance Golang microservices, and led the migration of services to AWS EKS. I also spent a good chunk of my time working closely with adjacent teams&apos; staff engineers to ensure seamless integration across engineering groups.
             </p>
             <br />
             <p>
