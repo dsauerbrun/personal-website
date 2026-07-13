@@ -7,7 +7,11 @@ services:
     image: personal-website:prod
     restart: unless-stopped
     ports:
-      - "127.0.0.1:3000:3000"      # localhost only; put a reverse proxy in front for TLS
+      # Host-specific bind IP comes from an untracked .env (WEB_BIND_IP).
+      # Defaults to loopback so a missing .env fails CLOSED (unreachable), never open.
+      # Set WEB_BIND_IP to the LAN interface (e.g. 192.168.0.118) so the reverse
+      # proxy on another host can reach it; a reverse proxy still fronts TLS.
+      - "${WEB_BIND_IP:-127.0.0.1}:3000:3000"
     read_only: true                # immutable root FS — no dropping webshells
     tmpfs:
       - /tmp
