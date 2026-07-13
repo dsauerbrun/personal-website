@@ -1,18 +1,32 @@
-version: '3'
-
 services:
   server:
     container_name: personal-website
     build:
       context: .
       dockerfile: ./Dockerfile
-    volumes:
-      - .:/app/personal-website
-    restart: always
+    image: personal-website:prod
+    restart: unless-stopped
     ports:
-      - 3000:3000
+      - "127.0.0.1:3000:3000"      # localhost only; put a reverse proxy in front for TLS
+    read_only: true                # immutable root FS — no dropping webshells
+    tmpfs:
+      - /tmp
+      - /app/.next/cache           # next may write cache here; keep it ephemeral
+    cap_drop: [ ALL ]
+    security_opt:
+      - no-new-privileges:true
+    user: "1000:1000"              # explicit non-root (matches USER bun in the image)
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 256
+    healthcheck:
+      test: ["CMD", "bun", "-e", "fetch('http://127.0.0.1:3000').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
+    # NOTE: no source bind mount. Code is COPYed into the image and reviewed via git.

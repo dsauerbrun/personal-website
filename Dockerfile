@@ -1,26 +1,20 @@
-# docker/dev.Dockerfile
-FROM oven/bun:latest
-
-WORKDIR /app/personal-website
-
-COPY package.json ./
-COPY bun.lock ./
-
-RUN bun install
-
+# ---- build ----
+FROM oven/bun:1 AS build
+WORKDIR /app
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN bun run build
 
-
-# Next.js collects completely anonymous telemetry data about general usage. Learn more here: https://nextjs.org/telemetry
-# Uncomment the following line to disable telemetry at run time
-ENV NEXT_TELEMETRY_DISABLED 1
-
-# for deploting the build version
-
-#RUN bun next build
-# and
-#CMD bun next start
-
-# OR for sart Next.js in development, comment above two lines and uncomment below line
-
-CMD bun run dev
+# ---- runtime ----
+FROM oven/bun:1 AS runtime
+WORKDIR /app
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1
+COPY --from=build /app/.next        ./.next
+COPY --from=build /app/public       ./public
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
+USER bun
+EXPOSE 3000
+CMD ["bun", "run", "start"]
